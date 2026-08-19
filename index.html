@@ -131,7 +131,7 @@
       Gryffindor
     </span>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective date: August 18, 2026</p>
+    <p class="effective">Effective date: August 19, 2026</p>
     <p class="lede">Gryffindor is a family chore, reward, and allowance tracker for iPhone. This policy explains, in plain language, what happens to your information when you use it. The short version: <strong>your family's data lives in your own iCloud, not on any server of ours. The only things that ever reach us are the ones you deliberately send.</strong></p>
   </header>
 </div>
@@ -168,12 +168,13 @@
   <li><strong>No phone numbers, no contacts, no address book.</strong></li>
   <li><strong>No advertising identifiers, no cross-app tracking, and no usage analytics reported to us or to anyone else.</strong></li>
   <li><strong>No browsing history.</strong></li>
+  <li><strong>No access to your family's chores, points, allowance, photos, calendar, or signatures.</strong> Those never leave your own iCloud.</li>
 </ul>
 
 <h2 id="what-we-can-see">What we can see</h2>
 <p>We want to be exact about this, because "we don't collect your data" is easy to say and easy to get wrong. There are three ways information reaches us or becomes public, and each is listed here in full.</p>
 <ol class="see">
-  <li><strong>Feedback you choose to send.</strong> If you tap "Send Feedback" and submit, that submission is saved in the app's shared Apple CloudKit area, where we read it. That area is not private: it is set up so that any copy of this app can read the feedback stored there. Please treat anything you send as public. A submission contains the message you typed, the category you picked (bug, idea, or other), the app version and build, your iOS version, your device model (for example "iPhone17,2"), whether you were using the app as a parent, your language and region setting, the name of the screen you launched feedback from, a random identifier for your app installation (not your Apple ID, and not linked to your identity), the time you submitted, and <strong>a screenshot only if you attach one</strong>. Feedback is available to parents only and never to a child profile. If you attach a screenshot, check what is on it first: a screenshot of the app will normally contain your family's names, and it is stored with the same open access as the rest of the submission.</li>
+  <li><strong>Feedback you choose to send.</strong> If you tap "Send Feedback" and submit, that submission goes to a database only we can read, and we do read it. A submission contains the message you typed, the category you picked (bug, idea, or other), the app version and build, your iOS version, your device model (for example "iPhone17,2"), whether you were using the app as a parent, your language and region setting, the name of the screen you launched feedback from, a random identifier for your app installation, the time you submitted, and <strong>a screenshot only if you attach one</strong>. The install identifier is not your Apple ID, your name, or your device's hardware ID, and it is not used to track you anywhere: it only lets us tell that two feedback messages came from the same install, and a factory reset in the app replaces it. Feedback is available to parents only and never to a child profile. If you attach a screenshot, check what is on it first: a screenshot of the app will normally contain your family's names, and attaching it means sending those names to us.</li>
   <li><strong>A sealed invite pointer, while an invite is open.</strong> When you create an invite code for a child's device, the app stores one small record in a shared lookup area so the other device can find your family. That record is named after a one-way hash of the invite code, not the code itself, and the only meaningful thing in it is your family's invitation link <strong>encrypted with a key derived from the invite code</strong>. We can see that a pointer exists and when it expires. We cannot open it, because we do not have your code. If you revoke the invite, the record is deleted straight away. If you simply let it expire, it stops working immediately, and the record itself is cleared the next time you open the invite screen.</li>
   <li><strong>A Game Center score, only if a parent turns it on.</strong> Game Center is off until a parent opts in, and consent belongs to that parent rather than to the device. Once on, the app submits <strong>a single number</strong> (that parent's all-time parent-engagement points) to a global leaderboard, under that parent's own Game Center nickname. It is never a child's point balance, and no names, chores, or family content are ever submitted. The leaderboard is public, so other Game Center users can see the nickname and the number. Turning the setting off stops any further scores being sent, but a number already on the leaderboard stays there: Game Center gives developers no way to remove a published score.</li>
 </ol>
@@ -205,14 +206,14 @@
   <li><strong>Your Apple Watch.</strong> If you have one paired, a small summary goes to your own watch over Apple's device link: today's chores, your points, and, for a parent, the approvals waiting on you and which child asked. It does not go to the internet.</li>
 </ol>
 <div class="card">
-  <p style="margin:0"><strong>Apple Intelligence features run on your device.</strong> Chore ideas, reward ideas, and the allowance plan explainer use Apple's on-device model. Your family's information is not sent anywhere for these. If you generate a profile image with Image Playground, that is Apple's own feature, handled by Apple.</p>
+  <p style="margin:0"><strong>Apple Intelligence features run on your device.</strong> Chore ideas, reward ideas, and the allowance plan explainer use Apple's on-device model. Nothing is sent to us, to Apple, or to any other company for these, there is no chat, and you can turn each one off in Settings. If you generate a profile image with Image Playground, that is Apple's own feature, handled by Apple.</p>
 </div>
 
 <h2>Search and Siri</h2>
 <p>So that you can find a chore or a family member from iOS search, the app adds family member names and whether each is a parent or a child, open chore titles with their point value and the name of the child they are assigned to, and reward names with their point cost, to your iPhone's built-in Spotlight index, and offers them to Siri and Shortcuts. This index is part of iOS and stays on your device; it is not visible to us. How iOS itself handles search and Siri data is covered by Apple's privacy settings, under Settings ▸ Apple Intelligence &amp; Siri. Deleting the app removes what it added.</p>
 
 <h2>How your data is stored and protected</h2>
-<p>Your data is stored on your device and in your iCloud account, where it is protected by Apple's encryption and your device passcode. The app also offers an optional passcode/Face ID lock for an extra layer of protection.</p>
+<p>Your data is stored on your device and in your iCloud account, where it is protected by Apple's encryption and your device passcode. The app also offers an optional passcode/Face ID lock for an extra layer of protection, and, on by default, it hides family names and photos behind redacted placeholders while the screen is being recorded, mirrored, or shared. That shield cannot cover a plain screenshot, which is why the feedback section above asks you to check one before attaching it.</p>
 <p>An invite code is the key to joining your family, so treat it like a password. The link is an ordinary web address with the code written into it, so if it is opened on a device that does not have Gryffindor installed, it is fetched from the web like any other page, code and all. It also travels through whatever app you share it with, and it is copied to your clipboard when you tap it. Revoke an invite you did not mean to send.</p>
 
 <h2>Keeping, exporting, and deleting your data</h2>
