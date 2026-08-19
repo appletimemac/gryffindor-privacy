@@ -2,162 +2,240 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gryffindor — Privacy Policy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Gryffindor's privacy policy: your family's data lives in your own iCloud, not on any server of ours.">
+<title>Privacy Policy — Gryffindor</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235e5ce6'/%3E%3Cstop offset='1' stop-color='%23af52de'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M50 20 L76 30 V52 C76 68 64 78 50 82 C36 78 24 68 24 52 V30 Z' fill='white' opacity='.92'/%3E%3C/svg%3E">
 <style>
   :root {
-    --bg: #ffffff; --fg: #1c1c1e; --muted: #6b6b70;
-    --accent: #6b4fd6; --card: #f6f5fb; --border: #e6e3f0;
+    --bg: #f7f6fb;
+    --card: rgba(255,255,255,.72);
+    --card-border: rgba(94,92,230,.14);
+    --ink: #1c1b22;
+    --ink-2: #52505e;
+    --ink-3: #8a8798;
+    --accent: #5e5ce6;
+    --accent-2: #af52de;
+    --band: linear-gradient(120deg, rgba(94,92,230,.16), rgba(175,82,222,.12) 55%, rgba(94,92,230,.05));
+    --rule: rgba(28,27,34,.08);
+    --code: rgba(94,92,230,.09);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0f0e13; --fg: #ececf1; --muted: #9b9aa3;
-      --accent: #b3a0ff; --card: #1a1822; --border: #2a2733;
+      --bg: #0d0d12;
+      --card: rgba(255,255,255,.055);
+      --card-border: rgba(158,155,255,.16);
+      --ink: #f2f1f7;
+      --ink-2: #b6b3c4;
+      --ink-3: #7d7a8c;
+      --accent: #8e8cff;
+      --accent-2: #d07aff;
+      --band: linear-gradient(120deg, rgba(94,92,230,.22), rgba(175,82,222,.14) 55%, rgba(94,92,230,0));
+      --rule: rgba(242,241,247,.09);
+      --code: rgba(142,140,255,.13);
     }
   }
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
   }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 22px 80px; }
-  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.02em; }
-  .eff { color: var(--muted); font-size: 14px; margin: 0 0 28px; }
-  h2 { font-size: 20px; margin: 38px 0 10px; letter-spacing: -0.01em; }
-  p { margin: 0 0 14px; }
-  ul { margin: 0 0 14px; padding-left: 22px; }
-  li { margin: 6px 0; }
-  a { color: var(--accent); }
-  strong { font-weight: 650; }
-  .lede {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: 16px; padding: 18px 20px; margin: 0 0 8px;
+  .band {
+    background: var(--band);
+    border-bottom: 1px solid var(--card-border);
   }
-  .lede p:last-child { margin-bottom: 0; }
-  footer { margin-top: 40px; color: var(--muted); font-size: 14px; }
-  code { background: var(--card); padding: 1px 6px; border-radius: 6px; font-size: 0.95em; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+  header.wrap { padding-top: max(2.6rem, env(safe-area-inset-top)); padding-bottom: 1.9rem; }
+  .mark {
+    display: inline-flex; align-items: center; gap: .55rem;
+    font-weight: 700; font-size: .95rem; letter-spacing: .01em; color: var(--ink-2);
+  }
+  .mark svg { width: 22px; height: 22px; border-radius: 6px; }
+  h1 {
+    margin: .65rem 0 .3rem;
+    font-size: clamp(1.9rem, 6vw, 2.5rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    font-weight: 800;
+  }
+  .effective { color: var(--ink-3); font-size: .92rem; font-weight: 600; margin: 0; }
+  .lede { color: var(--ink-2); margin: 1rem 0 0; font-size: 1.05rem; }
+  main.wrap { padding-top: 2.1rem; padding-bottom: 1rem; }
+  h2 {
+    margin: 2.6rem 0 .8rem;
+    font-size: 1.35rem; line-height: 1.25; letter-spacing: -.015em; font-weight: 750;
+  }
+  h2::before {
+    content: "";
+    display: block; width: 2.2rem; height: 4px; border-radius: 2px;
+    margin-bottom: .55rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  }
+  p { margin: .85rem 0; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  strong { font-weight: 700; }
+  ul, ol { padding-left: 1.35rem; margin: .85rem 0; }
+  li { margin: .5rem 0; }
+  li::marker { color: var(--accent); font-weight: 700; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.05rem 1.2rem;
+    margin: 1rem 0;
+    backdrop-filter: blur(10px);
+  }
+  ol.see { list-style: none; padding: 0; counter-reset: see; }
+  ol.see > li {
+    counter-increment: see;
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 1.05rem 1.2rem 1.05rem 3.4rem;
+    margin: .9rem 0;
+  }
+  ol.see > li::before {
+    content: counter(see);
+    position: absolute; left: 1.1rem; top: 1.15rem;
+    width: 1.7rem; height: 1.7rem;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #fff; font-weight: 800; font-size: .95rem;
+  }
+  code {
+    font: 600 .88em ui-monospace, "SF Mono", Menlo, monospace;
+    background: var(--code); border-radius: 6px; padding: .1em .4em;
+  }
+  footer.wrap {
+    margin-top: 3rem; padding-top: 1.4rem;
+    padding-bottom: max(2.6rem, env(safe-area-inset-bottom));
+    border-top: 1px solid var(--rule);
+    color: var(--ink-3); font-size: .92rem;
+  }
+  footer a { font-weight: 650; }
+  @media (min-width: 700px) { body { font-size: 18px; } }
 </style>
 </head>
 <body>
-<main>
-  <h1>Gryffindor — Privacy Policy</h1>
-  <p class="eff">Effective date: June 23, 2026</p>
 
-  <div class="lede">
-    <p>Gryffindor is a family chore, reward, and allowance tracker for iPhone.
-    This policy explains, in plain language, what happens to your information when
-    you use it. The short version: <strong>we don't collect your data — it stays
-    on your devices and in your family's own iCloud.</strong></p>
-  </div>
+<div class="band">
+  <header class="wrap">
+    <span class="mark">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5e5ce6"/><stop offset="1" stop-color="#af52de"/></linearGradient></defs><rect width="100" height="100" rx="22" fill="url(#hg)"/><path d="M50 20 L76 30 V52 C76 68 64 78 50 82 C36 78 24 68 24 52 V30 Z" fill="white" opacity=".92"/></svg>
+      Gryffindor
+    </span>
+    <h1>Privacy Policy</h1>
+    <p class="effective">Effective date: August 18, 2026</p>
+    <p class="lede">Gryffindor is a family chore, reward, and allowance tracker for iPhone. This policy explains, in plain language, what happens to your information when you use it. The short version: <strong>your family's data lives in your own iCloud, not on any server of ours. The only things that ever reach us are the ones you deliberately send.</strong></p>
+  </header>
+</div>
 
-  <h2>The one thing to know</h2>
-  <p>Gryffindor has <strong>no servers of its own</strong>. We, the developers,
-  never receive, store, or have access to anything your family enters. There is:</p>
-  <ul>
-    <li><strong>No analytics, no tracking, no advertising, and no third‑party SDKs.</strong></li>
-    <li><strong>No developer-run backend</strong> — nothing is sent to us.</li>
-    <li><strong>No selling or sharing of data with anyone.</strong></li>
-  </ul>
-  <p>Everything you create lives in two places only: <strong>on your device</strong>,
-  and — if you turn on iCloud sync — in <strong>your family's private iCloud
-  account</strong>, which is controlled by you and governed by
-  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We
-  cannot read it.</p>
+<main class="wrap">
 
-  <h2>What information the app stores</h2>
-  <p>You and your family enter this information so the app can work. It is stored
-  on your device and synced through your own iCloud to the family members you
-  invite:</p>
-  <ul>
-    <li><strong>Profiles:</strong> each family member's name and role (parent or
-    child), an optional profile photo, an optional profile color, and an optional
-    birth date (used to show ages and birthday reminders).</li>
-    <li><strong>Family activity:</strong> chores, rewards, goals, point balances,
-    allowance and savings amounts, swear‑jar adjustments, household rules,
-    achievements, and the in‑app notification feed.</li>
-    <li><strong>Calendar events</strong> you create in the app, and — only if you
-    enable it — events the app adds to your device calendar.</li>
-    <li><strong>Documents and photos</strong> you attach: chore "evidence" photos,
-    permission‑slip images or PDFs, and a parent's saved signature.</li>
-    <li><strong>Free‑text</strong> you type (notes, descriptions, reasons). Please
-    avoid entering sensitive details you don't want stored.</li>
-    <li><strong>Sign in with Apple identifier:</strong> if you sign in, Apple gives
-    the app an identifier (and, if you allow it, your name/email) used only to link
-    you to your family. It is stored in your device's Keychain and is never sent to
-    us.</li>
-  </ul>
+<h2>The one thing to know</h2>
+<p>Gryffindor has <strong>no servers of its own</strong> and no account with us. Your family's chores, points, photos, and notes are stored on your device and synced through <strong>your own iCloud account</strong>, which is controlled by you and governed by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. We cannot read any of it.</p>
+<ul>
+  <li><strong>No analytics, no tracking, no advertising, and no third-party SDKs.</strong> The app contains no analytics or crash-reporting libraries of any kind.</li>
+  <li><strong>No selling or sharing of data with anyone.</strong></li>
+  <li><strong>No profile of you.</strong> We have no account system, so there is nothing for us to build a profile on.</li>
+</ul>
+<p>There are exactly three things that leave your private iCloud, and you control all three. They are listed under <a href="#what-we-can-see">"What we can see"</a> below.</p>
 
-  <h2>Information we do NOT collect</h2>
-  <ul>
-    <li><strong>No location.</strong> The app does not request or use your location.</li>
-    <li><strong>No phone numbers, no contacts, no address book.</strong></li>
-    <li><strong>No advertising identifiers, no cross‑app tracking, no usage analytics.</strong></li>
-    <li><strong>No browsing history.</strong></li>
-  </ul>
+<h2>What information the app stores</h2>
+<p>You and your family enter this information so the app can work. It is stored on your device and synced through your own iCloud to the family members you invite:</p>
+<ul>
+  <li><strong>Profiles:</strong> each family member's name and role (parent or child), an optional profile photo, an optional profile color, and an optional birth date (used to show ages and birthday reminders).</li>
+  <li><strong>Family activity:</strong> chores, rewards, goals, point balances, allowance and savings amounts, swear-jar adjustments, household rules, achievements, and the in-app notification feed.</li>
+  <li><strong>Calendar events</strong> you create in the app (titles, dates, optional notes and photos), and, only if you enable it, events the app adds to your device calendar.</li>
+  <li><strong>Documents and photos</strong> you attach: chore "evidence" photos and permission-slip images or PDFs, which sync to your family. A parent's saved signature is kept separately, on that parent's own account only, and is never visible to other family members or to children.</li>
+  <li><strong>Free-text</strong> you type (notes, descriptions, reasons). Please avoid entering sensitive personal details you don't want stored.</li>
+  <li><strong>When the app is opened:</strong> a list, kept on this device only, of which days each family member opened the app and roughly what time, for up to about 400 days. It powers the activity heatmap, streaks, and achievement badges, and is never sent to us.</li>
+  <li><strong>Sign in with Apple identifier:</strong> if you sign in, Apple gives the app an identifier (and, if you allow it, your name/email) used only to link you to your family. It is stored in your device's Keychain and is never sent to us.</li>
+</ul>
+<div class="card">
+  <p style="margin:0"><strong>Widgets and the Lock Screen.</strong> If you add a Gryffindor widget, it shows family information wherever you put it. On the Lock Screen or in StandBy that includes a child's name next to their point total, and the title of the next family event, which anyone who picks up the phone can read without unlocking it. Remove the widget, or keep it on the Home Screen only, if you would rather not show that.</p>
+</div>
 
-  <h2>Children's privacy</h2>
-  <p>Gryffindor is designed for families. A parent or guardian sets up the
-  household and controls it. Any information about a child is entered by, and
-  visible to, the family — it is stored in the family's own iCloud, is never sold
-  or shared, and is never used for advertising or analytics. There are no third
-  parties involved. Parents can edit or delete a child's information, or remove
-  the child, at any time inside the app.</p>
-  <p>If you believe a child's information has been stored in a way you didn't
-  intend, a parent can delete it in the app, or contact us using the details
-  below.</p>
+<h2>Information we do NOT collect</h2>
+<ul>
+  <li><strong>No location.</strong> The app does not request or use your location, and contains no location code at all.</li>
+  <li><strong>No phone numbers, no contacts, no address book.</strong></li>
+  <li><strong>No advertising identifiers, no cross-app tracking, and no usage analytics reported to us or to anyone else.</strong></li>
+  <li><strong>No browsing history.</strong></li>
+</ul>
 
-  <h2>Permissions the app may ask for</h2>
-  <p>Each permission is optional and used only for the feature it powers:</p>
-  <ul>
-    <li><strong>Photos / Camera</strong> — to choose a profile avatar or attach a
-    photo to a chore or permission slip.</li>
-    <li><strong>Calendar</strong> — only if you choose to sync family events to
-    your device calendar.</li>
-    <li><strong>Notifications</strong> — to send chore reminders and family updates.</li>
-    <li><strong>Face ID / Touch ID</strong> — only if you turn on the optional app
-    passcode lock.</li>
-  </ul>
-  <p>You can change any of these at any time in the iOS Settings app.</p>
+<h2 id="what-we-can-see">What we can see</h2>
+<p>We want to be exact about this, because "we don't collect your data" is easy to say and easy to get wrong. There are three ways information reaches us or becomes public, and each is listed here in full.</p>
+<ol class="see">
+  <li><strong>Feedback you choose to send.</strong> If you tap "Send Feedback" and submit, that submission is saved in the app's shared Apple CloudKit area, where we read it. That area is not private: it is set up so that any copy of this app can read the feedback stored there. Please treat anything you send as public. A submission contains the message you typed, the category you picked (bug, idea, or other), the app version and build, your iOS version, your device model (for example "iPhone17,2"), whether you were using the app as a parent, your language and region setting, the name of the screen you launched feedback from, a random identifier for your app installation (not your Apple ID, and not linked to your identity), the time you submitted, and <strong>a screenshot only if you attach one</strong>. Feedback is available to parents only and never to a child profile. If you attach a screenshot, check what is on it first: a screenshot of the app will normally contain your family's names, and it is stored with the same open access as the rest of the submission.</li>
+  <li><strong>A sealed invite pointer, while an invite is open.</strong> When you create an invite code for a child's device, the app stores one small record in a shared lookup area so the other device can find your family. That record is named after a one-way hash of the invite code, not the code itself, and the only meaningful thing in it is your family's invitation link <strong>encrypted with a key derived from the invite code</strong>. We can see that a pointer exists and when it expires. We cannot open it, because we do not have your code. If you revoke the invite, the record is deleted straight away. If you simply let it expire, it stops working immediately, and the record itself is cleared the next time you open the invite screen.</li>
+  <li><strong>A Game Center score, only if a parent turns it on.</strong> Game Center is off until a parent opts in, and consent belongs to that parent rather than to the device. Once on, the app submits <strong>a single number</strong> (that parent's all-time parent-engagement points) to a global leaderboard, under that parent's own Game Center nickname. It is never a child's point balance, and no names, chores, or family content are ever submitted. The leaderboard is public, so other Game Center users can see the nickname and the number. Turning the setting off stops any further scores being sent, but a number already on the leaderboard stays there: Game Center gives developers no way to remove a published score.</li>
+</ol>
+<p>Nothing else in the app reports to us. There is no telemetry, no error reporting, and no background call home.</p>
 
-  <h2>Network activity</h2>
-  <p>The only times the app uses the network are:</p>
-  <ul>
-    <li><strong>iCloud sync</strong> — to keep your family's data in step across
-    your devices, via your own iCloud account (Apple).</li>
-    <li><strong>Reward links</strong> — if you paste a web link into a reward, the
-    app fetches a preview image from the website you chose. No data about you is
-    sent.</li>
-    <li><strong>In‑app feedback</strong> — if the optional Breakpoint companion app
-    is installed, tapping "Send Feedback" hands off to it. Only the information you
-    choose to type there is sent; the button is hidden if that app isn't installed.</li>
-  </ul>
+<h2>Children's privacy</h2>
+<p>Gryffindor is designed for families. A parent or guardian sets up the household and controls it. Any information about a child is entered by, and visible to, the family. It is stored in the family's own iCloud, is never sold or shared, and is never used for advertising or analytics. Parents can edit or delete a child's information, or remove the child, at any time inside the app.</p>
+<p>Children cannot send feedback, cannot turn on Game Center, and cannot invite anyone. Links out to other websites are behind a parental gate for child profiles.</p>
+<p>If you believe a child's information has been stored in a way you didn't intend, a parent can delete it in the app, or contact us using the details below.</p>
 
-  <h2>How your data is stored and protected</h2>
-  <p>Your data is stored on your device and in your iCloud account, where it is
-  protected by Apple's encryption and your device passcode. The app also offers an
-  optional passcode / Face ID lock for an extra layer of protection.</p>
+<h2>Permissions the app may ask for</h2>
+<p>Each permission is optional and used only for the feature it powers:</p>
+<ul>
+  <li><strong>Photos / Camera</strong> — to choose a profile avatar or attach a photo to a chore or permission slip.</li>
+  <li><strong>Calendar</strong> — only if you choose to sync family events to your device calendar.</li>
+  <li><strong>Notifications</strong> — to send chore reminders and family updates.</li>
+  <li><strong>Face ID / Touch ID</strong> — only if you turn on the optional app passcode lock.</li>
+</ul>
+<p>You can change any of these at any time in the iOS Settings app.</p>
 
-  <h2>Keeping, exporting, and deleting your data</h2>
-  <p>Because the data is yours and lives in your own storage:</p>
-  <ul>
-    <li><strong>Export:</strong> you can export your family's data from the app.</li>
-    <li><strong>Delete:</strong> delete individual items in the app, remove a family
-    member, leave a family, or delete the app to remove its local data. Removing
-    data from iCloud follows Apple's standard iCloud controls.</li>
-    <li><strong>Sign out</strong> clears the Sign in with Apple identifier from your
-    device.</li>
-  </ul>
+<h2>Network activity</h2>
+<p>This is the complete list of times the app causes anything to travel over a network.</p>
+<ol>
+  <li><strong>iCloud sync (Apple).</strong> Keeps your family's data in step across your family's devices, through your own iCloud account. This is continuous and automatic while sync is on. Apple's push service wakes the app when something changes; those wake-up messages carry no readable content.</li>
+  <li><strong>Feedback, invite pointers, and Game Center</strong>, exactly as described in <a href="#what-we-can-see">"What we can see"</a> above.</li>
+  <li><strong>Reward link previews (Amazon and Walmart only).</strong> If a reward has an Amazon or Walmart link on it, the app fetches that product page to show a title, price, and picture, and then loads the picture from whatever image host that page names. This happens automatically when the reward is opened. Nothing about you or your family is included, but the request itself tells that retailer's site that a device at your IP address looked at that product, the same as if you had opened the link in a browser. The app only fetches pages from links that look like Amazon or Walmart web addresses, and never goes looking for any other site on its own.</li>
+  <li><strong>Links you tap.</strong> Opening a product link, a birthday-wish link, or this policy hands the address to your browser, and from there the destination site sees an ordinary visit. Child profiles hit a parental gate first.</li>
+  <li><strong>Sharing you initiate.</strong> Sharing an invite link, or sharing a family progress report, sends whatever you chose through whichever app you picked. The progress report contains your children's names and their totals, so consider where you are sending it. Adding a family member through Apple's sharing screen gives Apple the email address or phone number you enter, so it can deliver the invitation.</li>
+  <li><strong>Your Apple Watch.</strong> If you have one paired, a small summary goes to your own watch over Apple's device link: today's chores, your points, and, for a parent, the approvals waiting on you and which child asked. It does not go to the internet.</li>
+</ol>
+<div class="card">
+  <p style="margin:0"><strong>Apple Intelligence features run on your device.</strong> Chore ideas, reward ideas, and the allowance plan explainer use Apple's on-device model. Your family's information is not sent anywhere for these. If you generate a profile image with Image Playground, that is Apple's own feature, handled by Apple.</p>
+</div>
 
-  <h2>Changes to this policy</h2>
-  <p>If we change this policy, we'll update the effective date above and post the
-  new version at this URL.</p>
+<h2>Search and Siri</h2>
+<p>So that you can find a chore or a family member from iOS search, the app adds family member names and whether each is a parent or a child, open chore titles with their point value and the name of the child they are assigned to, and reward names with their point cost, to your iPhone's built-in Spotlight index, and offers them to Siri and Shortcuts. This index is part of iOS and stays on your device; it is not visible to us. How iOS itself handles search and Siri data is covered by Apple's privacy settings, under Settings ▸ Apple Intelligence &amp; Siri. Deleting the app removes what it added.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about privacy? Contact us at:
-  <a href="mailto:appletimemacDEV@icloud.com">appletimemacDEV@icloud.com</a></p>
+<h2>How your data is stored and protected</h2>
+<p>Your data is stored on your device and in your iCloud account, where it is protected by Apple's encryption and your device passcode. The app also offers an optional passcode/Face ID lock for an extra layer of protection.</p>
+<p>An invite code is the key to joining your family, so treat it like a password. The link is an ordinary web address with the code written into it, so if it is opened on a device that does not have Gryffindor installed, it is fetched from the web like any other page, code and all. It also travels through whatever app you share it with, and it is copied to your clipboard when you tap it. Revoke an invite you did not mean to send.</p>
 
-  <footer>© 2026 Gryffindor. This policy applies to the Gryffindor iOS app.</footer>
+<h2>Keeping, exporting, and deleting your data</h2>
+<p>Because the data is yours and lives in your own storage:</p>
+<ul>
+  <li><strong>Export:</strong> you can export your family's data from the app. The export is a plain, unencrypted file containing your whole family history, saved wherever you choose. If you pick a cloud drive, it goes to that provider under your account with them. Keep it somewhere you trust.</li>
+  <li><strong>Calendar:</strong> if you turn on calendar sync, events are written to a calendar account on your device. If that account belongs to a non-Apple provider, those events live with that provider under their privacy policy.</li>
+  <li><strong>Delete:</strong> delete individual items in the app, remove a family member, leave a family, or delete the app to remove its local data. Removing data from iCloud follows Apple's standard iCloud controls.</li>
+  <li><strong>Sign out</strong> clears the Sign in with Apple identifier from your device.</li>
+</ul>
+
+<h2>Changes to this policy</h2>
+<p>If we change this policy, we'll update the effective date above and post the new version at this URL.</p>
+
+<h2>Contact</h2>
+<p>Questions about privacy? Contact us at: <a href="mailto:appletimemacDEV@icloud.com"><strong>appletimemacDEV@icloud.com</strong></a></p>
+
 </main>
+
+<footer class="wrap">
+  <p>See also the <a href="terms.html">Terms of Service</a>. Both pages are readable inside the app under Settings ▸ About ▸ Legal.</p>
+</footer>
+
 </body>
 </html>
